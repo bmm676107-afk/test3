@@ -1,0 +1,19 @@
+const test = require('node:test');
+const assert = require('node:assert');
+const { totalPrice, applyDiscount } = require('../src/price');
+
+test('totalPrice adds up the prices', () => {
+  assert.strictEqual(totalPrice([10, 5, 3]), 18);
+});
+
+test('applyDiscount takes a percent off', () => {
+  assert.strictEqual(applyDiscount(200, 10), 180);
+});
+
+test('a 0 percent discount changes nothing', () => {
+  assert.strictEqual(applyDiscount(200, 0), 200);
+});
+
+test('a 100 percent discount makes it free', () => {
+  assert.strictEqual(applyDiscount(200, 100), 0);
+});

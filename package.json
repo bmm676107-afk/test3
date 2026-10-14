@@ -1,0 +1,14 @@
+{
+  "name": "pizza-ci",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A tiny project for learning CI with GitHub Actions",
+  "scripts": {
+    "build": "node --check src/price.js && node --check src/order.js",
+    "lint": "eslint .",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "eslint": "^10.12.0"
+  }
+}

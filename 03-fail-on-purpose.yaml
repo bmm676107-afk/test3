@@ -1,0 +1,16 @@
+name: CI
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  pipeline:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Lint (pretend)
+        run: echo "Checking that the code is tidy..."
+      - name: Test (pretend)
+        run: echo "A test FAILED!" && exit 1
+      - name: Build (pretend)
+        run: echo "Building the program..."
+      - name: Package (pretend)
+        run: echo "Putting it in a box..."
